@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  hbase:
+    image: harisekhon/hbase
+    container_name: hbase
+    ports:
+      - "16010:16010"  # HBase Master UI
+      - "9090:9090"    # Thrift
+      - "2181:2181"    # Zookeeper
+      - "16000:16000"  # Master
+      - "16020:16020"  # RegionServer
+
+  spark-jupyter:
+    image: jupyter/pyspark-notebook
+    container_name: spark-jupyter
+    depends_on:
+      - hbase
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../notebooks:/home/jovyan/work
+      - ../data:/home/jovyan/data
