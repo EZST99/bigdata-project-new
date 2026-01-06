@@ -1,0 +1,26 @@
+Projektbeschreibung
+
+Was wollen wir herausfinden?
+Gibt es eine Korrelation zwischen dem Erfolg eines Filmes und der Kommentarsektion des Filmtrailers?
+
+Vorgehensweise
+Step 1: Daten beschaffen
+    Movie Success Dataset von Kaggle
+    Sentimentanalyse Dataset von Kaggle
+    Youtube Trailer Titel und Kommentare über Youtube API von Kanal "KinoCheck"
+        Weg ist folgendermaßen: KinoCheck ChannelID --> KinoCheck Upload-PlaylistID --> VideoIDs --> Kommentare
+        Bei Kommentaren wenn möglich nach solchen filtern, die vor der Kinoerscheinung veröffentlicht wurden
+
+Step 2: Daten aufbereiten
+    Sentimentanalyse Dataset kann erstmal so bleiben
+    Movie Success cleanup und im Anschluss join mit Trailer Table
+        Dafür müssen Titel übereinstimmen was bedeutet: Alles kleingeschrieben, bei Youtube Titel Erscheinungsjahr und Sprache entfernen
+        Danach kontrollieren ob bzw bei wie vielen die richtigen Titel gefunden/gejoint werden können 
+
+Step 3: Sentimentanalyse
+    Kommentare (schätze wir bekommen ca 250 pro Film) pro Trailer mit dem Sentiment-Dataset einstufen 
+    Einzelne Kommentare nur in Positiv, Ausgeglichen, Negativ einordnen (vielleicht +1/0/-1 und daraus dann einen Wert pro Film errechnen und dann Schwellenwerte setzen?)
+
+Step 4: Ergebnis finden
+    Sentiment und Movie Success vereinen und Analysieren ob sich Muster erkennen lassen
+
