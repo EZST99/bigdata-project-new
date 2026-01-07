@@ -17,10 +17,18 @@ Step 2: Daten aufbereiten
         Dafür müssen Titel übereinstimmen was bedeutet: Alles kleingeschrieben, bei Youtube Titel Erscheinungsjahr und Sprache entfernen
         Danach kontrollieren ob bzw bei wie vielen die richtigen Titel gefunden/gejoint werden können 
 
+--- We are here ---
+
 Step 3: Sentimentanalyse
-    Kommentare (schätze wir bekommen ca 250 pro Film) pro Trailer mit dem Sentiment-Dataset einstufen 
-    Einzelne Kommentare nur in Positiv, Ausgeglichen, Negativ einordnen (vielleicht +1/0/-1 und daraus dann einen Wert pro Film errechnen und dann Schwellenwerte setzen?)
+    Kommentare pro Trailer mit dem Sentiment-Dataset einstufen 
+    Maximal 100 pro Film, können aber auch weniger sein wenn nicht so viele Kommentare verfasst wurden
+    Dinge die spannend für eine Sentimentanalyse sind:
+        Durchschnittliches Sentiment
+        Median
+        Anteil Negativ/Positiv
+        Varianz
+        Kommentaranzahl
 
 Step 4: Ergebnis finden
-    Sentiment und Movie Success vereinen und Analysieren ob sich Muster erkennen lassen
+    Sentimentanalyse und Movie Success vereinen und Analysieren ob sich Muster erkennen lassen
 
