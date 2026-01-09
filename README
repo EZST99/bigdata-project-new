@@ -17,8 +17,6 @@ Step 2: Daten aufbereiten
         Dafür müssen Titel übereinstimmen was bedeutet: Alles kleingeschrieben, bei Youtube Titel Erscheinungsjahr und Sprache entfernen
         Danach kontrollieren ob bzw bei wie vielen die richtigen Titel gefunden/gejoint werden können 
 
---- We are here ---
-
 Step 3: Sentimentanalyse
     Kommentare pro Trailer mit dem Sentiment-Dataset einstufen 
     Maximal 100 pro Film, können aber auch weniger sein wenn nicht so viele Kommentare verfasst wurden
